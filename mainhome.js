@@ -67,9 +67,15 @@ let coursesAndDurationArrs = [
 //     Завдання робити через цикли.
 for (const arr1 of coursesAndDurationArrs) {
     let div2 = document.createElement('div')
-   let h1 = document.createElement('h1')
-    h1.innerText = arr.title
-    let p = document.createElement('p')
-    p.innerText = arr.monthDuration
+    div2.classList.add('item')
 
-    document.body.appendChild(div2)}
+   let h1 = document.createElement('h1')
+    h1.classList.add('heading')
+    h1.innerText = arr1.title
+    let p = document.createElement('p')
+    p.classList.add('description')
+    p.innerText = arr1.monthDuration
+    div2.appendChild(h1)
+    div2.appendChild(p)
+    document.body.appendChild(div2)
+    }
