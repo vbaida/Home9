@@ -50,8 +50,10 @@ for (const arr of coursesAndDurationArray) {
  let div1 = document.createElement('div')
   div1.innerText = `${arr.title} ${arr.monthDuration}`
  document.body.appendChild(div1)
+    let wraps = document.getElementsByClassName('wrap')
+    wraps[0].appendChild(div1)
 }
-//
+
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
