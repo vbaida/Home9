@@ -12,7 +12,8 @@ div.style.background = 'silver'
 div.style.color = 'black'
 div.style.fontSize = '20px'
 div.style.width = '100%'
-div.style.height = '200px'
+div.style.height = '100%'
+
 // - додати цей блок в body.
 document.body.appendChild(div)
 // - клонувати його повністю, та додати клон в body.
@@ -77,5 +78,5 @@ for (const arr1 of coursesAndDurationArrs) {
     p.innerText = arr1.monthDuration
     div2.appendChild(h1)
     div2.appendChild(p)
-    document.body.appendChild(div2)
+    divclone.appendChild(div2)
     }
