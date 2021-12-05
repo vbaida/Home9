@@ -35,7 +35,7 @@ let simpsons = [
         info: 'Ма́ргарет Эвелин «Мэ́гги» Си́мпсон (англ. Margaret Evelyn “Maggie” Simpson) — персонаж мультсериала «Симпсоны». Впервые появилась на телевидении в шоу Трейси Ульман, в короткометражке Good Night (англ.)русск. 19 апреля 1987 года. Мэгги была придумана и разработана карикатуристом Мэттом Грейнингом, пока он ждал встречи с Джеймсом Л. Бруксом. Названа в честь младшей сестры Грейнинга. После появления в шоу Трейси Ульман, через три года семья Симпсонов получила собственный сериал на телеканале Fox, дебют произошёл 17 декабря 1989 года.',
         photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
     },
-];
+    ];
 // Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
 // for (const simpson of simpsons) {
 //     let div = document.createElement('div')
@@ -51,21 +51,21 @@ for (const simpson of simpsons) {
     let div = document.createElement('div')
     div.classList.add('member')
 
-    let divname = document.createElement('div')
+    let divname = document.createElement('h1')
     divname.innerText = simpson.name
-    let divsurname = document.createElement('div')
+    let divsurname = document.createElement('h1')
     divsurname.innerText = simpson.surname
-    let divage = document.createElement('div')
+    let divage = document.createElement('h2')
     divage.innerText = simpson.age
-    let divinfo = document.createElement('div')
+    let divinfo = document.createElement('p')
     divinfo.innerText = simpson.info
-    let divphoto = document.createElement('div')
-    divphoto.innerText = simpson.photo
+    let img = document.createElement('img')
+    img.src = simpson.photo
     div.appendChild(divname);
     div.appendChild(divsurname);
     div.appendChild(divage);
     div.appendChild(divinfo);
-    div.appendChild(divphoto);
+    div.appendChild(img);
     document.body.appendChild(div)
 
     // div.innerText = `${simpson.name} ${simpson.surname} ${simpson.age} ${simpson.info} ${simpson.photo}`
@@ -145,16 +145,17 @@ let coursesArray = [
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей,
 // для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png
+
 for (const cours of coursesArray) {
     let div = document.createElement('div')
     document.body.appendChild(div)
-    let divtitle = document.createElement('div')
+    let divtitle = document.createElement('h1')
     divtitle.innerText = cours.title
     div.appendChild(divtitle)
-    let divmonthDuration = document.createElement('div')
+    let divmonthDuration = document.createElement('h2')
     divmonthDuration.innerText = cours.monthDuration
     div.appendChild(divmonthDuration)
-    let divhourDuration = document.createElement('div')
+    let divhourDuration = document.createElement('h2')
     divhourDuration.innerText = cours.hourDuration
     div.appendChild(divhourDuration)
 
@@ -174,10 +175,9 @@ let divhtml = document.createElement('div')
     divjs.innerText = cours.modules[2]
     divmodules.appendChild(divjs)
 
-    for (const module of cours.modules) {
     let ul = document.createElement('ul')
     divmodules.appendChild(ul)
-
+    for (const module of cours.modules) {
         let li = document.createElement('li')
         li.innerText = module
         ul.appendChild(li)
