@@ -49,19 +49,27 @@ console.log(coursesAndDurationArray)
 for (const arr of coursesAndDurationArray) {
  let div1 = document.createElement('div')
   div1.innerText = `${arr.title} ${arr.monthDuration}`
- document.body.appendChild(div1)
     let wraps = document.getElementsByClassName('wrap')
     wraps[0].appendChild(div1)
 }
 
 // - Є масив
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
-// За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
+let coursesAndDurationArrs = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+// За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,
+// в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
 //     Завдання робити через цикли.
+for (const arr1 of coursesAndDurationArrs) {
+    let div2 = document.createElement('div')
+   let h1 = document.createElement('h1')
+    h1.innerText = arr.title
+    let p = document.createElement('p')
+    p.innerText = arr.monthDuration
+
+    document.body.appendChild(div2)}
